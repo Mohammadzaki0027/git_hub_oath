@@ -8,7 +8,7 @@ app.get("/",(req,res)=>{
 
 
 app.post("/login",(req,res)=>{
-    res.send("welcome to Homepage")
+    res.send("welcome to login page")
 })
 
 app.post("/signup",(req,res)=>{
