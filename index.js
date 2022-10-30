@@ -10,6 +10,10 @@ app.get("/",(req,res)=>{
 app.post("/login",(req,res)=>{
     res.send("welcome to Homepage")
 })
+
+app.post("/signup",(req,res)=>{
+    res.send("welcome to signup")
+})
 app.listen(8080, () => {
   try {
     console.log("connected");
