@@ -7,3 +7,4 @@ SignupRoute.post("/",(res,req)=>{
     res.send("Signup page")
 })
 
+module.exports={SignupRoute}
