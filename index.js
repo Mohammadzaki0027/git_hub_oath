@@ -1,19 +1,21 @@
 const express = require("express");
 app.use(express.json())
 const app = express();
-const bcrypt=require("bcrypt")
-app.get("/",(req,res)=>{
+const bcrypt=require("bcrypt");
+const { SignupRoute } = require("./Router/signup.Route");
+app.use("/",SignupRoute)
+SignupRoute.get("/",(req,res)=>{
     res.send("welcome to Homepage")
 })
 
-app.notes("/notes",(req,res)=>{
+SignupRoute.notes("/notes",(req,res)=>{
     res.send("Welcome to notes page")
 })
-app.post("/login",(req,res)=>{
+SignupRoute.post("/login",(req,res)=>{
     res.send("welcome to login page")
 })
 
-app.post("/signup",(req,res)=>{
+SignupRoute.post("/signup",(req,res)=>{
     res.send("welcome to signup")
 })
 app.listen(8080, () => {
