@@ -1,5 +1,5 @@
 const express = require("express");
-
+app.use(express.json())
 const app = express();
 const bcrypt=require("bcrypt")
 app.get("/",(req,res)=>{
