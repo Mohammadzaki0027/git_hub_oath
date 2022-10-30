@@ -6,7 +6,9 @@ app.get("/",(req,res)=>{
     res.send("welcome to Homepage")
 })
 
-
+app.notes("/notes",(req,res)=>{
+    res.send("Welcome to notes page")
+})
 app.post("/login",(req,res)=>{
     res.send("welcome to login page")
 })
