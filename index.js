@@ -11,8 +11,10 @@ const client_id="d9ef25dcf93821d24201"
 
 
 app.get("/github/callback",(req,res)=>{
-  const token=req.query
-  console.log(token);
+  const code=req.query.code
+const access_token=axios.get(`https://github.com/login/oauth/access_token?client_id=${client_id}&client_secret=${client_secret}&code=${code}`)
+
+
   res.send("signin with git hub")
 })
 
